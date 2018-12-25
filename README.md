@@ -7,9 +7,10 @@ This project investigates using statistics from information theory, such as *Sha
 User should only change the filepath and filenames as indicated in the script.
 
 The following data is required as input (please organize the data in ONE folder):
-	- Clump Results from the ANOVA process
-	- Tox21 Assay chemical concentration-response data from qHTS screens (e.g. "AssayData.txt")
-	- Corresponding metadata for the assay data (contians std dev. of negative controls
+
+	* Clump Results from the ANOVA process
+	* Tox21 Assay chemical concentration-response data from qHTS screens (e.g. "AssayData.txt")
+	* Corresponding metadata for the assay data (contians std dev. of negative controls
 
 Pipeline will execute the following automatically and in this order:
 
@@ -20,7 +21,7 @@ Pipeline will execute the following automatically and in this order:
 		a. Filename "AssayData_0.txt" -> orignal data
 		b. Filename "AssayData_1.txt", "AssayData_2.txt", ... , "AssayData_30.txt" -> permuted data
 
-	3. MI, Pearson correlation, and Spearman correlation will be computed between all filtered CAS IDs<sup>1</sup>
+	3. MI, Pearson correlation, and Spearman correlation will be computed between all filtered CAS IDsU+00B9
 		a. Filename "AssayData_Spline_0.txt" -> data processing of original data ("AssayData_0.txt")
 		b. Filename "AssayData_Spline_1.txt", "AssayData_Spline_2.txt", ... , "AssayData_Spline_30.txt" -> data processing of permuted data
 
@@ -40,8 +41,7 @@ Pipeline will execute the following automatically and in this order:
 			i. Significant MI value and insignificant Pearson correlation coefficient graphs written out to Pearson folder
 			ii. Significant MI value and insignificant Spearman correlation coefficient graphs written out to Spearman folder
 
-<sup>1</sup>Interpolating splines are used to estimate biological response values at specific concentration intervals along each individual profile for every chemical.
- This strategy accounts for missing data and unequal concentration spacing in raw qHTS data.
+<sup>1</sup>Interpolating splines are used to estimate biological response values at specific concentration intervals along each individual profile for every chemical. This strategy accounts for missing data and unequal concentration spacing in raw qHTS data.
 
 NOTE: Input data remains in the home directory. Processed data are written out to Data folder. All plots are written out to Graphics folder.
 
