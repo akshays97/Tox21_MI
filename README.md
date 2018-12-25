@@ -12,6 +12,7 @@ The following data is required as input (please organize the data in ONE folder)
 	- Corresponding metadata for the assay data (contians std dev. of negative controls
 
 Pipeline will execute the following automatically and in this order:
+
 	1. CAS IDs from Clump Results will be filtered to CAS IDs with homogeneous profiles (i.e. clump = 1)
 		a. A list of these CAS IDs will be written out to "CASRN.txt"
 
@@ -19,7 +20,7 @@ Pipeline will execute the following automatically and in this order:
 		a. Filename "AssayData_0.txt" -> orignal data
 		b. Filename "AssayData_1.txt", "AssayData_2.txt", ... , "AssayData_30.txt" -> permuted data
 
-	*3. MI, Pearson correlation, and Spearman correlation will be computed between all filtered CAS IDs
+	3. MI, Pearson correlation, and Spearman correlation will be computed between all filtered CAS IDs<sup>1</sup>
 		a. Filename "AssayData_Spline_0.txt" -> data processing of original data ("AssayData_0.txt")
 		b. Filename "AssayData_Spline_1.txt", "AssayData_Spline_2.txt", ... , "AssayData_Spline_30.txt" -> data processing of permuted data
 
@@ -39,7 +40,7 @@ Pipeline will execute the following automatically and in this order:
 			i. Significant MI value and insignificant Pearson correlation coefficient graphs written out to Pearson folder
 			ii. Significant MI value and insignificant Spearman correlation coefficient graphs written out to Spearman folder
 
-*Interpolating splines are used to estimate biological response values at specific concentration intervals along each individual profile for every chemical.
+<sup>1</sup>Interpolating splines are used to estimate biological response values at specific concentration intervals along each individual profile for every chemical.
  This strategy accounts for missing data and unequal concentration spacing in raw qHTS data.
 
 NOTE: Input data remains in the home directory. Processed data are written out to Data folder. All plots are written out to Graphics folder.
