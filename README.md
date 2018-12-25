@@ -3,6 +3,8 @@
 
 This project investigates using statistics from information theory, such as *Shannon entropy* and *mutual information*, to analyze dose-response data from drug screens. 
 
+The results of this analysis is summarized in [this poster](Sankar_Poster.pdf)
+
 
 User should only change the filepath and filenames as indicated in the script.
 
